@@ -1,0 +1,30 @@
+.book-list {
+    margin: 10px auto;
+    border-top: 1px gray solid;
+    border-left: 1px gray solid;
+    border-collapse: collapse;
+}
+thead {
+    height: 1.5rem;
+    background-color: rgb(220, 220, 180);
+}
+td {
+    text-align: center;
+    border-right: 1px gray solid;
+    border-bottom: 1px gray solid;
+}
+.col-id {
+    width: 8rem;
+}
+.col-img {
+    width: 150px;
+}
+.col-name {
+    width: 25rem;
+}
+.col-data {
+    width: 14rem
+}
+tbody {
+    background-color: rgb(207, 207, 154);
+}

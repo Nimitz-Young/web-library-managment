@@ -1,0 +1,19 @@
+/* 字体颜色的css样式 */
+.blue1 {
+    color: rgb(49, 72, 104);
+}
+.blue2 {
+    color: rgb(55, 121, 212);
+}
+.blue3 {
+    color: rgb(40, 72, 172);
+}
+.yellow {
+    color: yellow;
+}
+.red {
+    color: red;
+}
+.black {
+    color: black;
+}

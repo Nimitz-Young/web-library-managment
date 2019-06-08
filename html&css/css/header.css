@@ -1,0 +1,18 @@
+.header {
+    background-color: aliceblue;
+}
+.header-welcome {
+    padding-top: 20px;
+}
+.welcome1 {
+    font-size: 50px;
+    display: inline;
+}
+.welcome2 {
+    font-size: 40px;
+    display: inline;
+}
+.header-info-area {
+    display: inline;
+    font-size: 28px;
+}
