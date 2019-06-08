@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.left-menu {
+    display: inline;
+    float: left;
+    background-color: rgb(2, 16, 36);
+    color: white;
+    text-align: center;
+    width: 150px;
+    height: 100%;
+}
+.rigt-body {
+    display: inline;
+    float: left;
+    height: 100%
+}
+.span {
+    width: 15px;
+    height: 100%;
+    display: inline;
+    float: left;
+}

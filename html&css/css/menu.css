@@ -1,0 +1,18 @@
+.menu-div1 {
+    width: 150px;
+    height: 30px;
+    margin: 30px auto 15px auto;
+    font-size: 20px;
+}
+.menu-div2 {
+    font-size: 18px;
+    margin: 10px auto 10px auto;
+}
+.menu-div3 {
+    font-size: 16px;
+    background-color: rgb(20, 36, 56);
+}
+.btn-a {
+    color: white;
+    text-decoration: none;
+}
