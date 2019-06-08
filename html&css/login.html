@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SYSU Library - Login</title>
+        <meta charset="utf-8">
+        <style>
+            @import "css/login.css";
+        </style>
+    </head>
+    <body>
+        <div class="backimg">
+            <div class="head">
+                <p><img src="images/favicon.ico" class="favicon"> SYSU Library</p>
+            </div>
+            <div class="login_wrapper">
+                <div class="login-content">
+                    <form>
+                        <h2>登录</h2>
+                        <div><input type="text" id="lo-username" class="form-control" placeholder="Username" /></div>
+                        <div><input type="password" id="lo-password" class="form-control" placeholder="Password" /></div>
+                        <div><input type="button" class="btn btn-style1" id="btn-login" value="登录" onclick="login()"></div>
+                        <div><input type="button" id="forgetpassword" value="忘记密码" onclick="forgetpassword()"></div>
+                    </form>
+                </div>
+                <div class="alert alert-login-wrong-unorpw">
+                    <strong>登录失败</strong>
+                    <small>用户名或密码错误</small>
+                </div>
+                <div class="alert alert-login-empty-unorpw">
+                    <strong>登录失败</strong>
+                    <small>用户名或密码缺失</small>
+                </div>
+                <div class="alert alert-login-disconnect">
+                    <strong>登录失败</strong>
+                    <small>连接失败</small>
+                </div>
+                <div class="to-register">
+                    <p>新用户→<input type="button" class="btn btn-style2" id="btn-to-register" value="注册界面" onclick="toRegister()"></p>
+                </div>
+            </div>
+            <div class="register-wrapper">
+                <div class="login-content">
+                    <form>
+                        <h2>注册新账号</h2>
+                        <div><input type="text" id="re-username" class="form-control" placeholder="Username"></div>
+                        <div><input type="password" id="re-password" class="form-control" placeholder="Password"></div>
+                        <div><input type="password" id="re-password-conf" class="form-control" placeholder="Password Confirm"></div>
+                        <input type="button" class="btn btn-style1" id="btn-register" value="注册" onclick="register()">
+                    </form>
+                </div>
+                <div class="alert alert-regi-pwnotequal">
+                    <strong>注册失败</strong>
+                    <small>两次输入的密码不一致</small>
+                </div>
+                <div class="alert alert-regi-empty-unorpw">
+                    <strong>注册失败</strong>
+                    <small>用户名或密码缺失</small>
+                </div>
+                <div class="alert alert-regi-disconnect">
+                    <strong>注册失败</strong>
+                    <small>连接失败</small>
+                </div>
+                <div class="alert alert-regi-unhasbeen">
+                    <strong>注册失败</strong>
+                    <small>用户名已存在</small>
+                </div>
+                <div class="to-login">
+                    <p>老用户→<input type="button" class="btn btn-style2" id="btn-to-login" value="登录界面" onclick="toLogin()"></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toRegister(){
+                document.querySelector(".login_wrapper").style.display = "none";
+                document.querySelector(".register-wrapper").style.display = "block";
+            }
+            function toLogin(){
+                document.querySelector(".register-wrapper").style.display = "none";
+                document.querySelector(".login_wrapper").style.display = "block";
+            }
+            function login(){
+                var alert_list = document.querySelectorAll(".alert");
+                for (var i = 0; i < alert_list.length; i++){
+                    alert_list[i].style.display = "none";
+                }
+
+                var un = document.getElementById("lo-username").value;
+                var pw = document.getElementById("lo-password").value;
+
+                if (un == "" || pw == "") {
+                    document.querySelector(".alert-login-empty-unorpw").style.display = "block";
+                    return;
+                }
+            }
+            function register(){
+                var alert_list = document.querySelectorAll(".alert");
+                for (var i = 0; i < alert_list.length; i++){
+                    alert_list[i].style.display = "none";
+                }
+
+                var un = document.getElementById("re-username").value;
+                var pw1 = document.getElementById("re-password").value;
+                var pw2 = document.getElementById("re-password-conf").value;
+
+                if (un == "" || pw1 == "" || pw2 == ""){
+                    document.querySelector(".alert-regi-empty-unorpw").style.display = "block";
+                    return;
+                } else if (pw1 != pw2){
+                    document.querySelector(".alert-regi-pwnotequal").style.display = "block";
+                    return;
+                }
+            }
+            function forgetpassword(){
+                str = "请联系管理员：\n邮箱：651505591@qq.com";
+                alert(str);
+            }
+        </script>
+    </body>
+</html>
