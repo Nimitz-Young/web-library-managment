@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SYSU Library</title>
+        <meta charset="utf-8">
+        <style>
+            @import "css/body.css";
+            @import "css/menu.css";
+            @import "css/color.css";
+            @import "css/header.css";
+            @import "css/img.css";
+            @import "css/input.css";
+            @import "css/book-list.css";
+            
+            .search-div {
+                font-size: 24px;
+                margin-left: 40px;
+            }
+            .select-div {
+                margin: 10px auto 10px auto;
+            }
+            .bkground1 {
+                margin-top: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="left-menu">
+            <div class="menu-div1">
+                SYSU Library
+            </div>
+            <div>
+                <h3 class="menu-h3">功能菜单</h3>
+                <div class="menu-div2 all-user">
+                    <a class="btn-a btn-a1" href="/">首页</a>
+                </div>
+                <div class="menu-div2 all-user">
+                    个人相关
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>历史借阅</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">个人信息</a></div>
+                </div>
+                <div class="menu-div2 all-user">
+                    馆藏相关
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">书籍检索</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">借还挂失</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">最近新书</a></div>
+                </div>
+                <div class="menu-div2 normal-user">
+                    联系我们
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">书籍推荐</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">志愿者申请</a></div>
+                </div>
+                <div class="menu-div2 adminster">
+                    管理员功能
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>书籍入库</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>书籍挂失</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>志愿者管理</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="span"></div>
+        <div class="right-body">
+            <div class="header header-text">书籍检索</div> 
+            <br> 
+            <div class="bkground1">
+                <div class="search-div">
+                    <!-- 静态的就好了 -->
+                    <!-- 下拉菜单，可以按书名、作者、isbn搜索，应当支持模糊搜索 -->
+                    <!-- 搜索框 -->
+                    <!-- 搜索按钮 -->
+                    <div class="select-div">
+                        检索方式：&nbsp;
+                        <input type="radio" name="search-type">ISBN&nbsp;
+                        <input type="radio" name="search-type">书名&nbsp;
+                        <input type="radio" name="search-type">作者
+                    </div>
+                    <div id="inputbox">
+                        <input type="text" class="text-input" id="search-input" placeholder="Text in book information here">
+                        <input type="button" class="btn-follow btn-color1" id="search-btn" value="检索">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="record-list">
+                <table class="book-list">
+                    <thead class="black">
+                        <td class="col-id">书籍ID</td>
+                        <td class="col-img">封面</td>
+                        <td class="col-name">书名</td>
+                        <td class="col-date">借出日期</td>
+                        <td class="col-date">还书期限</td>
+                    </thead>
+                    <tbody>
+                        <!-- CSS测试数据 -->
+                        <td class="col-id">00000000</td>
+                        <td class="col-img"><img src="images/testimg.jpg" class="img-size1"></td>
+                        <td class="col-name">人类简史</td>
+                        <td class="col-date">2019.12.12</td>
+                        <td class="col-date">2019.12.13</td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+
+</html>
