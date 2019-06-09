@@ -1,0 +1,20 @@
+.text-input {
+    height: 32px;
+    font-size: 22px;
+    width: 18em;
+}
+.btn {
+    font-size: 24px;
+    padding: 3px 20px;
+    margin: 2px 5px;
+    color: white;
+}
+.btn-color1 {
+    background-color: rgb(35, 27, 148);
+}
+.btn-color2 {
+    background-color: rgb(190, 24, 24);
+}
+.btn-color3 {
+    background-color: rgb(29, 190, 24);
+}

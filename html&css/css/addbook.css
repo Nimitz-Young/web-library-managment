@@ -1,0 +1,16 @@
+.input-area {
+    display: inline;
+    float: left;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+.text-input-div {
+    font-size: 25px;
+    margin: 5px 0px 5px 0px;
+}
+.cover-area {
+    display: inline;
+    float: left;
+    margin-left: 120px;
+    margin-top: 25px;
+}
