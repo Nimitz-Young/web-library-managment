@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SYSU Library</title>
+        <meta charset="utf-8">
+        <style>
+            @import "css/menu.css";
+            @import "css/color.css";
+            @import "css/header.css";
+            @import "css/img.css";
+            @import "css/input.css";
+            @import "css/book-list.css";
+            @import "css/search.css";
+            @import "css/body.css";
+        </style>
+    </head>
+    <body>
+        <div class="left-menu">
+            <div class="menu-div1">
+                SYSU Library
+            </div>
+            <div>
+                <h3 class="menu-h3">功能菜单</h3>
+                <div class="menu-div2 all-user">
+                    <a class="btn-a btn-a1" href="/">首页</a>
+                </div>
+                <div class="menu-div2 all-user">
+                    个人相关
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>历史借阅</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">个人信息</a></div>
+                </div>
+                <div class="menu-div2 all-user">
+                    馆藏相关
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">书籍检索</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">借还挂失</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">最近新书</a></div>
+                </div>
+                <div class="menu-div2 normal-user">
+                    联系我们
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">书籍推荐</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">志愿者申请</a></div>
+                </div>
+                <div class="menu-div2 adminster">
+                    管理员功能
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>书籍入库</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>书籍挂失</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>志愿者管理</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="span"></div>
+        <div class="right-body">
+            <div class="header">
+                <div class="header-text">最近新书</div>
+                <br>
+                <div class="header-info">
+                    <!-- 缺少数据和后端接口 -->
+                    <!-- 显示最近一周和一月内入库的新书 -->
+                    <div class="header-info-area blue1">馆藏总量&nbsp;0&nbsp;&nbsp;</div>
+                    <div class="header-info-area blue2">本周新书&nbsp;0&nbsp;&nbsp;</div>
+                    <div class="header-info-area green">本月新书&nbsp;0&nbsp;&nbsp;</div>
+                </div>
+            </div> 
+            <br>
+            <div class="record-list">
+                <table class="book-list">
+                    <thead class="black">
+                        <td class="col-id">书籍ID</td>
+                        <td class="col-img">封面</td>
+                        <td class="col-name">书名</td>
+                        <td class="col-date">入库日期</td>
+                        <!-- 书籍的状态包括被借阅、未被借阅、遗失 -->
+                        <td class="col-name">当前状态</td>
+                    </thead>
+                    <tbody>
+                        <!-- CSS测试数据 -->
+                        <td class="col-id">00000000</td>
+                        <td class="col-img"><img src="images/testimg.jpg" class="img-size1"></td>
+                        <td class="col-name">人类简史</td>
+                        <td class="col-date">2019.12.12</td>
+                        <td class="col-date">未被借阅</td>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </body>
+</html>
