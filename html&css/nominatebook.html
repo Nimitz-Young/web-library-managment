@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SYSU Library</title>
+        <meta charset="utf-8">
+        <style>
+            @import "css/body.css";
+            @import "css/menu.css";
+            @import "css/color.css";
+            @import "css/header.css";
+            @import "css/img.css";
+            @import "css/addbook.css";
+            @import "css/input.css";
+        </style>
+    </head>
+    <body>
+        <div class="left-menu">
+            <div class="menu-div1">
+                SYSU Library
+            </div>
+            <div>
+                <h3 class="menu-h3">功能菜单</h3>
+                <div class="menu-div2 all-user">
+                    <a class="btn-a btn-a1" href="/">首页</a>
+                </div>
+                <div class="menu-div2 all-user">
+                    个人相关
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>历史借阅</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">个人信息</a></div>
+                </div>
+                <div class="menu-div2 all-user">
+                    馆藏相关
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">书籍检索</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">借还挂失</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">最近新书</a></div>
+                </div>
+                <div class="menu-div2 normal-user">
+                    联系我们
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">书籍推荐</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">志愿者申请</a></div>
+                </div>
+                <div class="menu-div2 adminster">
+                    管理员功能
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>书籍入库</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>书籍挂失</a></div>
+                    <div class="menu-div3"><a class="btn-a btn-a2" href='/'>志愿者管理</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="span"></div>
+        <div class="right-body">
+            <div class="header header-text">书籍入库</div>
+            <br>
+            <div class="add-book">
+                <div class="input-area">
+                    <div class="text-input-div">ISBN：&nbsp;<input type="text" class="text-input" id="addbok-isbn" placeholder="请输入ISBN号以获取书籍信息"></div>
+                    <div class="text-input-div">书名：&nbsp;<input type="text" class="text-input" id="addbook-name"></div>
+                    <div class="text-input-div">出版社：&nbsp;<input type="text" class="text-input" id="addbook-publisher"></div>
+                    <div class="text-input-div">出版日期：&nbsp;<input type="text" class="text-input" id="addbook-pubdate"></div>
+                    <div class="text-input-div">价格：&nbsp;<input type="text" class="text-input" id="addbook-price"></div>
+                    <br>
+                    <div class="btn-input-div">
+                        <input type="button" class="btn btn-color1" id="get-book-info" value="获取书籍信息">
+                        <input type="button" class="btn btn-color2" id="clear" value="清空">
+                        <input type="button" class="btn btn-color3" id="add-to-library" value="书籍推荐">
+                    </div>
+                </div>
+                <script>
+                    document.getElementById("clear").addEventListener("click", () => {
+                        var list1 = document.querySelectorAll(".text-input");
+                        for(var i = 0; i < list1.length; i++){
+                            list1[i].value = "";
+                        }
+                        // 单选选项清零未完成
+                    });
+                </script>
+                <div class="cover-area">
+                    <!-- 测试数据 -->
+                    <img class="img-size2" src="images/testimg.jpg">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
