@@ -10,22 +10,59 @@
             @import "css/header.css";
             @import "css/img.css";
             @import "css/book-list.css";
+            @import "css/input.css";
         </style>
     </head>
     <body>
+        <div class="hidden black_bkground"></div>
+        <div class="hidden white_content">
+            <div class="to-be-center">
+                <div class="window-header">
+                    个人信息页面
+                </div>
+                <table class="window-table">
+                    <tr>
+                        <td>账号：</td>
+                        <td id="account">xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                        <td>昵称：</td>
+                        <td><input type="text" class="window-input"></td>
+                    </tr>
+                    <tr class="change-password">
+                        <td colspan="2"><input type="password" placeholder="请输入新密码" class="window-input show-border" id="pw1"></td>
+                    </tr>
+                    <tr class="change-password">
+                        <td colspan="2"><input type="password" placeholder="请再次输入密码" class="window-input show-border" id="pw2"></td>
+                    </tr>
+                </table>
+                <input type="button" class="window-btn btn-color1" value="点此修改密码" id="tochangepw">
+                <br>
+                <input type="button" class="window-btn btn-color3" value="保存昵称" id="savechange">
+                <br>
+                <input type="button" class="window-btn btn-color2" value="关闭个人信息页面" id="closewindow">
+            </div>
+        </div>
         <div class="left-menu">
             <div class="menu-div1">
                 SYSU Library
             </div>
             <div>
                 <h3 class="menu-h3">功能菜单</h3>
+                <!-- 已完成：
+                    首页
+                    个人相关——历史借阅
+                    馆藏相关——书籍检索、借还挂失、最近新书
+                    联系我们——书籍推荐
+                    管理员功能——书籍入库
+                -->
                 <div class="menu-div2 all-user">
-                    <a class="btn-a btn-a1" href="/">首页</a>
+                    <a class="btn-a btn-a1" href='/'>首页</a>
                 </div>
                 <div class="menu-div2 all-user">
                     个人相关
                     <div class="menu-div3"><a class="btn-a btn-a2" href='/'>历史借阅</a></div>
-                    <div class="menu-div3"><a class="btn-a btn-a2" href="/">个人信息</a></div>
+                    <div class="menu-div3"><button class="btn-a btn-a2" id="person-information">个人信息</button></div>
                 </div>
                 <div class="menu-div2 all-user">
                     馆藏相关
@@ -44,8 +81,23 @@
                     <div class="menu-div3"><a class="btn-a btn-a2" href='/'>书籍挂失</a></div>
                     <div class="menu-div3"><a class="btn-a btn-a2" href='/'>志愿者管理</a></div>
                 </div>
+                <script>
+                    document.getElementById("person-information").addEventListener('click', () => {
+                        var l = document.querySelectorAll(".hidden");
+                        for(var i = 0; i < l.length; i++){
+                            l[i].style.display = 'block';
+                        }
+                    });
+                    document.getElementById("closewindow").addEventListener('click', () => {
+                        var l = document.querySelectorAll(".hidden");
+                        for(var i = 0; i < l.length; i++){
+                            l[i].style.display = 'none';
+                        }
+                    });
+                </script>
             </div>
         </div>
+        
         <div class="span"></div>
         <div class="right-body">
             <div class="header">
